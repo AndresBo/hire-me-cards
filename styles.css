@@ -31,6 +31,34 @@
   box-sizing: border-box;
 }
 
+img {
+  display: block;
+}
+
+.ux {
+  --bg: var(--clr-ux-300);
+  --fg: var(--clr-ux-400);
+}
+.ui {
+  --bg: var(--clr-ui-300);
+  --fg: var(--clr-ui-400);
+}
+.dev {
+  --bg: var(--clr-dev-300);
+  --fg: var(--clr-dev-400);
+}
+
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  padding: 0.5em 3em;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--fg, #fff);
+  background-color: var(--bg, var(--clr-accent-400));
+  border-radius: var(--border-radius);
+}
+
 html {
   font-family: var(--ff-base);
   line-height: 1.6;
@@ -49,23 +77,14 @@ html {
   color: var(--fg, #333);
 }
 
-.ux {
-  --bg: var(--clr-ux-300);
-  --fg: var(--clr-ux-400);
-}
 
-.ui {
-  --bg: var(--clr-ui-300);
-  --fg: var(--clr-ui-400);
-}
-
-.dev {
-  --bg: var(--clr-dev-300);
-  --fg: var(--clr-dev-400);
-}
 
 .candidate {
   padding: 1rem;
+}
+
+.candidate > img {
+  border-radius: var(--border-radius);
 }
 
 .candidate .name,
@@ -79,6 +98,29 @@ html {
   font-size: var(--fs-500);
   color: var(--clr-base-500);
   line-height: 1;
+}
+
+.candidate .roles {
+  line-height: 1;
+  font-size: var(--fs-300);
+}
+
+.candidate .social {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.candidate .social a:hover,
+.candidate .social a:focus {
+  opacity: 0.5;  
+}
+
+.candidate .btn {
+  align-self: end;
+  justify-self: end;
 }
 
 /* /////////////////
