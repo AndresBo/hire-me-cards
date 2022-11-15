@@ -73,6 +73,8 @@
 
 .candidate img {
   grid-area: img;
+  border-radius: var(--border-radius);
+  margin: 1rem 0 0 1rem;
 }
 .candidate .name {
   grid-area: name;
