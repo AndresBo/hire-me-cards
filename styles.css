@@ -25,6 +25,62 @@
   --border-radius: 0.75rem;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--ff-base);
+  line-height: 1.6;
+  font-size: var(--fs-400);
+  color: var(--clr-base-400)
+}
+
+.tag {
+  font-size: var(--ff-base);
+  font-weight: var(--fw-700);
+  display: inline-block;
+  padding: 0.15em 0.5em;
+  border-radius: 100vw;
+  margin-right: 0.5em;
+  background: var(--bg, lightgray);
+  color: var(--fg, #333);
+}
+
+.ux {
+  --bg: var(--clr-ux-300);
+  --fg: var(--clr-ux-400);
+}
+
+.ui {
+  --bg: var(--clr-ui-300);
+  --fg: var(--clr-ui-400);
+}
+
+.dev {
+  --bg: var(--clr-dev-300);
+  --fg: var(--clr-dev-400);
+}
+
+.candidate {
+  padding: 1rem;
+}
+
+.candidate .name,
+.candidate .roles,
+.candidate .bio {
+  margin: 0;
+}
+
+.candidate .name {
+  font-family: var(--ff-accent);
+  font-size: var(--fs-500);
+  color: var(--clr-base-500);
+  line-height: 1;
+}
+
 /* /////////////////
    Layout related
    no need to touch any of this
@@ -73,8 +129,6 @@
 
 .candidate img {
   grid-area: img;
-  border-radius: var(--border-radius);
-  margin: 1rem 0 0 1rem;
 }
 .candidate .name {
   grid-area: name;
